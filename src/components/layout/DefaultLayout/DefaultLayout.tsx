@@ -29,7 +29,7 @@ export const DefaultLayout: React.FC<DefaultLayoutProps> = ({ children }) => {
         <Header />
       </GridItem>
 
-      <GridItem colSpan={6}>
+      <GridItem colSpan={6} overflowX="hidden">
         <VStack h="full" align="start" px="8">
           {children}
         </VStack>
