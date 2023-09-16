@@ -1,6 +1,17 @@
 import { extendTheme } from '@chakra-ui/react'
 
 export const theme = extendTheme({
+  styles: {
+    global: {
+      '*::-webkit-scrollbar': {
+        width: '10px',
+      },
+      '*::-webkit-scrollbar-thumb': {
+        borderRadius: '4px',
+        backgroundColor: 'darkgrey',
+      },
+    },
+  },
   fonts: {
     heading: `'Montserrat', sans-serif`,
     body: `'Montserrat', sans-serif`,
