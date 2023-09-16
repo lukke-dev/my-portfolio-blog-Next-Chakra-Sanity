@@ -1,10 +1,13 @@
 import {
-  Heading,
-  Image,
   Text,
+  Image,
   VStack,
+  Heading,
   useColorModeValue,
+  Box,
 } from '@chakra-ui/react'
+import { useRef } from 'react'
+import { useHover } from 'usehooks-ts'
 
 type PostCardProps = {
   imageUrl: string
@@ -19,38 +22,40 @@ export const PostCard: React.FC<PostCardProps> = ({
   postDescription,
   postFooter,
 }) => {
+  const hoverRef = useRef(null)
+  const isHover = useHover(hoverRef)
   return (
     <VStack
-      rounded="md"
-      boxShadow={'2xl'}
-      bg={useColorModeValue('white', 'gray.900')}
+      p="3"
+      ref={hoverRef}
+      cursor="pointer"
+      borderRadius="4"
+      borderWidth="1px"
+      borderColor={useColorModeValue('blackAlpha.300', 'whiteAlpha.400')}
     >
-      <Image
-        w="full"
-        h="180px"
-        m={4}
-        border="1px solid"
-        rounded="xl"
-        alt="post"
-        src={imageUrl}
-      />
+      <Box w="full" overflow="hidden">
+        <Image
+          w="full"
+          h="36"
+          alt="post"
+          src={imageUrl}
+          borderRadius="4"
+          objectFit="cover"
+          transition="all 0.2s ease 0s"
+          {...(isHover && {
+            transform: 'scale(1.1)',
+          })}
+        />
+      </Box>
 
-      <VStack px="4" pb="3" h="full">
-        <Heading
-          color={useColorModeValue('gray.700', 'white')}
-          fontSize={'xl'}
-          fontFamily={'body'}
-        >
-          {postTitle}
-        </Heading>
-        <Text color={'gray.500'} h="full">
-          {postDescription}
-        </Text>
+      <Heading color={useColorModeValue('gray.700', 'white')} fontSize={'xl'}>
+        {postTitle}
+      </Heading>
+      <Text color={'gray.500'}>{postDescription}</Text>
 
-        <Text fontSize="sm" color={'gray.500'} w="full">
-          {postFooter}
-        </Text>
-      </VStack>
+      <Text fontSize="sm" color={'gray.600'} w="full">
+        {postFooter}
+      </Text>
     </VStack>
   )
 }

@@ -18,33 +18,57 @@ const Posts: React.FC = () => {
           Posts
         </Heading>
       </Box>
-      <Grid templateColumns="repeat(2, 1fr)" gap={6}>
+      <Grid templateColumns="repeat(3, 1fr)" gap={6}>
         <PostCard
-          imageUrl="https://ml2bqlaoxl7w.i.optimole.com/w:825/h:510/q:mauto/f:avif/https://www.extwebtech.com/wp-content/uploads/2023/02/ror-react.webp"
+          imageUrl="https://www.insightssuccess.in/wp-content/uploads/2016/12/IMAGE-insights.jpg"
           postTitle="Boost your conversion rate lorem ipsum"
           postDescription="Lorem ipsum dolor sit amet, consetetur sadipscing elitr ..."
           postFooter="Feb 08, 2021 · 6min read"
         />
         <PostCard
-          imageUrl="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+          imageUrl="https://www.insightssuccess.in/wp-content/uploads/2016/12/IMAGE-insights.jpg"
           postTitle="Boost your conversion rate lorem ipsum"
           postDescription="Lorem ipsum dolor sit amet, consetetur sadipscing elitr ..."
           postFooter="Feb 08, 2021 · 6min read"
         />
         <PostCard
-          imageUrl="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+          imageUrl="https://www.insightssuccess.in/wp-content/uploads/2016/12/IMAGE-insights.jpg"
           postTitle="Boost your conversion rate lorem ipsum"
           postDescription="Lorem ipsum dolor sit amet, consetetur sadipscing elitr ..."
           postFooter="Feb 08, 2021 · 6min read"
         />
         <PostCard
-          imageUrl="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+          imageUrl="https://www.insightssuccess.in/wp-content/uploads/2016/12/IMAGE-insights.jpg"
           postTitle="Boost your conversion rate lorem ipsum"
           postDescription="Lorem ipsum dolor sit amet, consetetur sadipscing elitr ..."
           postFooter="Feb 08, 2021 · 6min read"
         />
         <PostCard
-          imageUrl="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+          imageUrl="https://www.insightssuccess.in/wp-content/uploads/2016/12/IMAGE-insights.jpg"
+          postTitle="Boost your conversion rate lorem ipsum"
+          postDescription="Lorem ipsum dolor sit amet, consetetur sadipscing elitr ..."
+          postFooter="Feb 08, 2021 · 6min read"
+        />
+        <PostCard
+          imageUrl="https://www.insightssuccess.in/wp-content/uploads/2016/12/IMAGE-insights.jpg"
+          postTitle="Boost your conversion rate lorem ipsum"
+          postDescription="Lorem ipsum dolor sit amet, consetetur sadipscing elitr ..."
+          postFooter="Feb 08, 2021 · 6min read"
+        />
+        <PostCard
+          imageUrl="https://www.insightssuccess.in/wp-content/uploads/2016/12/IMAGE-insights.jpg"
+          postTitle="Boost your conversion rate lorem ipsum"
+          postDescription="Lorem ipsum dolor sit amet, consetetur sadipscing elitr ..."
+          postFooter="Feb 08, 2021 · 6min read"
+        />
+        <PostCard
+          imageUrl="https://www.insightssuccess.in/wp-content/uploads/2016/12/IMAGE-insights.jpg"
+          postTitle="Boost your conversion rate lorem ipsum"
+          postDescription="Lorem ipsum dolor sit amet, consetetur sadipscing elitr ..."
+          postFooter="Feb 08, 2021 · 6min read"
+        />
+        <PostCard
+          imageUrl="https://www.insightssuccess.in/wp-content/uploads/2016/12/IMAGE-insights.jpg"
           postTitle="Boost your conversion rate lorem ipsum"
           postDescription="Lorem ipsum dolor sit amet, consetetur sadipscing elitr ..."
           postFooter="Feb 08, 2021 · 6min read"
