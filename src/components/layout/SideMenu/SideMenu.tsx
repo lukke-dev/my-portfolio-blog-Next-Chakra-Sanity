@@ -25,11 +25,6 @@ export const SideMenu: React.FC = () => {
       href: '/posts',
       icon: FaBlog,
     },
-    {
-      title: 'Portfolio',
-      href: '/portfolio',
-      icon: FaDev,
-    },
   ]
 
   return (
