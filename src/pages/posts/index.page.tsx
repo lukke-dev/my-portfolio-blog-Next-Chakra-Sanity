@@ -6,8 +6,8 @@ const Posts: React.FC = () => {
   return (
     <>
       <Box
+        mb="4"
         w="full"
-        mb="4" // remover ou mudar dps
         borderBottom="1px"
         borderColor={useColorModeValue('blackAlpha.300', 'whiteAlpha.400')}
       >

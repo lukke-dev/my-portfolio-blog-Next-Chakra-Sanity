@@ -1,10 +1,6 @@
-import { IconType } from 'react-icons'
+import React from 'react'
+import { IconLinkProps } from './types'
 import { Icon, Link, useColorModeValue } from '@chakra-ui/react'
-
-type IconLinkProps = {
-  icon: IconType
-  href: string
-}
 
 export const IconLink: React.FC<IconLinkProps> = ({ icon, href }) => {
   return (

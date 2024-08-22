@@ -1,3 +1,3 @@
-export * from './IconLink'
 export * from './layout'
-export * from './PostCard'
+export * from './icon-link'
+export * from './post-card'

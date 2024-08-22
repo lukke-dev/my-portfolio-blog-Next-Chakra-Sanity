@@ -1,29 +1,24 @@
+import React, { useRef } from 'react'
 import {
+  Box,
   Text,
   Image,
   VStack,
   Heading,
   useColorModeValue,
-  Box,
 } from '@chakra-ui/react'
-import { useRef } from 'react'
 import { useHover } from 'usehooks-ts'
-
-type PostCardProps = {
-  imageUrl: string
-  postTitle: string
-  postDescription: string
-  postFooter: string
-}
+import { PostCardProps } from './types'
 
 export const PostCard: React.FC<PostCardProps> = ({
   imageUrl,
   postTitle,
-  postDescription,
   postFooter,
+  postDescription,
 }) => {
   const hoverRef = useRef(null)
   const isHover = useHover(hoverRef)
+
   return (
     <VStack
       p="3"

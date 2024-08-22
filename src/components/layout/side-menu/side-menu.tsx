@@ -1,10 +1,11 @@
+import React from 'react'
 import { IconLink } from '@/components'
 import { Link } from '@chakra-ui/next-js'
-import { Avatar, VStack, Heading, Text, HStack, Icon } from '@chakra-ui/react'
-import { BsLinkedin, BsGithub, BsInstagram } from 'react-icons/bs'
-import { FaHome, FaBlog, FaDev } from 'react-icons/fa'
-import { RiProfileLine } from 'react-icons/ri'
 import { usePathname } from 'next/navigation'
+import { RiProfileLine } from 'react-icons/ri'
+import { FaHome, FaBlog } from 'react-icons/fa'
+import { BsLinkedin, BsGithub, BsInstagram } from 'react-icons/bs'
+import { Avatar, VStack, Heading, Text, HStack, Icon } from '@chakra-ui/react'
 
 export const SideMenu: React.FC = () => {
   const pathname = usePathname()

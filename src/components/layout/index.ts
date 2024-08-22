@@ -1,3 +1,3 @@
-export * from './DefaultLayout'
-export * from './SideMenu'
-export * from './Header'
+export * from './default-layout'
+export * from './side-menu'
+export * from './header'

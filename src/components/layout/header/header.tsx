@@ -1,36 +1,36 @@
 import React from 'react'
 import {
-  HStack,
-  IconButton,
-  useColorMode,
-  useDisclosure,
-  useColorModeValue,
-  Modal,
-  ModalBody,
-  ModalContent,
-  ModalOverlay,
-  Input,
-  InputGroup,
-  InputLeftElement,
   List,
-  ListIcon,
-  ListItem,
-  Button,
   Text,
   Icon,
+  Modal,
+  Input,
+  HStack,
+  Button,
+  ListItem,
+  ModalBody,
+  IconButton,
+  InputGroup,
+  ModalContent,
+  ModalOverlay,
+  useColorMode,
+  useDisclosure,
+  InputLeftElement,
+  useColorModeValue,
 } from '@chakra-ui/react'
 import {
   BsSearch,
   BsSunFill,
-  BsFillFilePostFill,
   BsMoonStarsFill,
   BsArrowReturnLeft,
+  BsFillFilePostFill,
 } from 'react-icons/bs'
 import { Link } from '@chakra-ui/next-js'
 
 export const Header: React.FC = () => {
   const { isOpen, onOpen, onClose } = useDisclosure()
   const { colorMode, toggleColorMode } = useColorMode()
+
   return (
     <HStack justify="flex-end" align="center" h="full" px="2">
       <IconButton

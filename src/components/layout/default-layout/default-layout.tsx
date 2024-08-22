@@ -1,19 +1,16 @@
+import React from 'react'
 import { SideMenu, Header } from '..'
-import React, { ReactElement } from 'react'
+import { DefaultLayoutProps } from './types'
 import { Grid, GridItem, VStack, useColorModeValue } from '@chakra-ui/react'
-
-type DefaultLayoutProps = {
-  children: ReactElement
-}
 
 export const DefaultLayout: React.FC<DefaultLayoutProps> = ({ children }) => {
   return (
     <Grid
       h="100vh"
       w="100vw"
-      bg={useColorModeValue('gray.100', 'gray.800')}
       templateRows="50px 1fr"
       templateColumns="repeat(8, 2fr)"
+      bg={useColorModeValue('gray.100', 'gray.800')}
     >
       <GridItem
         colSpan={2}

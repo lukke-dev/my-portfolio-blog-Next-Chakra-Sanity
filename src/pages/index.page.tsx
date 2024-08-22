@@ -2,15 +2,14 @@ import React, { ReactElement } from 'react'
 import {
   Box,
   Flex,
-  Heading,
-  Stack,
   Text,
-  Image,
-  useColorModeValue,
-  Container,
   Icon,
+  Stack,
+  Image,
+  Heading,
   SimpleGrid,
   StackDivider,
+  useColorModeValue,
 } from '@chakra-ui/react'
 import { IoAnalyticsSharp, IoLogoBitcoin, IoSearchSharp } from 'react-icons/io5'
 
@@ -42,8 +41,8 @@ const Home: React.FC = () => {
   return (
     <>
       <Box
+        mb="4"
         w="full"
-        mb="4" // remover ou mudar dps
         borderBottom="1px"
         borderColor={useColorModeValue('blackAlpha.300', 'whiteAlpha.400')}
       >
