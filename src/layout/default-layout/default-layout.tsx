@@ -1,6 +1,6 @@
 import React from 'react'
-import { SideMenu, Header } from '..'
 import { DefaultLayoutProps } from './types'
+import { Header, SideMenu } from './components'
 import { Grid, GridItem, VStack, useColorModeValue } from '@chakra-ui/react'
 
 export const DefaultLayout: React.FC<DefaultLayoutProps> = ({ children }) => {
