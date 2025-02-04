@@ -10,8 +10,12 @@ import {
   useColorModeValue,
 } from '@chakra-ui/react'
 import { FaGithubAlt } from 'react-icons/fa'
+import { useTranslation } from 'next-i18next'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
 const About: React.FC = () => {
+  const { t } = useTranslation('common')
+
   return (
     <>
       <Box
@@ -24,7 +28,7 @@ const About: React.FC = () => {
           size="lg"
           color={useColorModeValue('gray.700', 'whiteAlpha.900')}
         >
-          About me
+          {t('about_title')}
         </Heading>
       </Box>
       <VStack align="flex-start" spacing="4" pr="20">
@@ -68,5 +72,11 @@ const About: React.FC = () => {
     </>
   )
 }
+
+export const getServerSideProps = async ({ locale }: { locale: string }) => ({
+  props: {
+    ...(await serverSideTranslations(locale, ['common'])),
+  },
+})
 
 export default About

@@ -1,9 +1,10 @@
 import { theme } from '@/config'
 import type { AppProps } from 'next/app'
 import { ChakraProvider } from '@chakra-ui/react'
+import { appWithTranslation } from 'next-i18next'
 import { AdminLayout, DefaultLayout, ErrorLayout } from '@/layout'
 
-export default function App({ Component, pageProps }: AppProps) {
+function App({ Component, pageProps }: AppProps) {
   const layouts = {
     ErrorPage: ErrorLayout,
     StudioPage: AdminLayout,
@@ -20,3 +21,5 @@ export default function App({ Component, pageProps }: AppProps) {
     </ChakraProvider>
   )
 }
+
+export default appWithTranslation(App)
