@@ -1,4 +1,5 @@
 import React from 'react'
+import { i18n } from 'next-i18next'
 import { IconLink } from '@/components'
 import { Link } from '@chakra-ui/next-js'
 import { usePathname } from 'next/navigation'
@@ -13,17 +14,17 @@ export const SideMenu: React.FC = () => {
   const menuLinks = [
     {
       title: 'Home',
-      href: '/',
+      href: `/${i18n?.language}/`,
       icon: FaHome,
     },
     {
       title: 'About me',
-      href: '/about',
+      href: `/${i18n?.language}/about`,
       icon: RiProfileLine,
     },
     {
       title: 'Blog Posts',
-      href: '/posts',
+      href: `/${i18n?.language}/posts`,
       icon: FaBlog,
     },
   ]

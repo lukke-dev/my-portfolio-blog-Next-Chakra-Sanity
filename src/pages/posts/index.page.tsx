@@ -1,8 +1,12 @@
 import React from 'react'
 import { PostCard } from '@/components'
+import { getAllPosts } from '@src/queries'
+import { GetStaticProps } from '@node_modules/next'
 import { Box, Heading, useColorModeValue, Grid } from '@chakra-ui/react'
 
-const Posts: React.FC = () => {
+const Posts: React.FC = (posts) => {
+  console.log('posts: ', posts)
+
   return (
     <>
       <Box
@@ -76,6 +80,16 @@ const Posts: React.FC = () => {
       </Grid>
     </>
   )
+}
+
+export const getStaticProps: GetStaticProps = async () => {
+  const posts = await getAllPosts()
+  return {
+    props: {
+      posts,
+    },
+    revalidate: 60 * 60 * 10 * 7, // 1 week
+  }
 }
 
 export default Posts

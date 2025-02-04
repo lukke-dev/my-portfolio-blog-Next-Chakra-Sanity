@@ -1,26 +1,16 @@
 import { Config } from 'sanity'
-import { deskTool } from 'sanity/desk'
 import { visionTool } from '@sanity/vision'
-import { AdminNavbar } from '@src/components'
 import { schemaTypes } from './sanity/schemas'
+import { structureTool } from 'sanity/structure'
 
 export const config: Config = {
   name: 'default',
-  title: 'LS shop',
+  title: 'Lucas - Blog',
   basePath: '/__admin',
-
-  projectId: 'psk4jylf',
-  dataset: 'production',
-
-  plugins: [deskTool(), visionTool()],
-
+  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || '',
+  dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || '',
+  plugins: [structureTool(), visionTool()],
   schema: {
     types: schemaTypes,
-  },
-
-  studio: {
-    components: {
-      navbar: AdminNavbar,
-    },
   },
 }
