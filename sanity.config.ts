@@ -1,7 +1,7 @@
 import { Config } from 'sanity'
+import { deskTool } from 'sanity/desk'
 import { visionTool } from '@sanity/vision'
 import { schemaTypes } from './sanity/schemas'
-import { structureTool } from 'sanity/structure'
 
 export const config: Config = {
   name: 'default',
@@ -9,7 +9,7 @@ export const config: Config = {
   basePath: '/__admin',
   projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || '',
   dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || '',
-  plugins: [structureTool(), visionTool()],
+  plugins: [deskTool(), visionTool()],
   schema: {
     types: schemaTypes,
   },
