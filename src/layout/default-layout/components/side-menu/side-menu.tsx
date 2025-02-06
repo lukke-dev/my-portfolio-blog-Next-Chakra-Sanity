@@ -14,17 +14,17 @@ export const SideMenu: React.FC = () => {
   const menuLinks = [
     {
       title: 'Home',
-      href: `/${i18n?.language}/`,
+      href: `/`,
       icon: FaHome,
     },
     {
       title: 'About me',
-      href: `/${i18n?.language}/about`,
+      href: `/about`,
       icon: RiProfileLine,
     },
     {
       title: 'Blog Posts',
-      href: `/${i18n?.language}/posts`,
+      href: `/posts`,
       icon: FaBlog,
     },
   ]
@@ -32,7 +32,7 @@ export const SideMenu: React.FC = () => {
   return (
     <VStack py="14" px="8" spacing="20" h="full">
       <VStack spacing="4">
-        <Avatar size="xl" src="https://github.com/lukke-dev.png" />
+        <Avatar size="xl" src="/assets/images/avatar.jpeg" />
         <Heading size="md">Lucas dos Santos</Heading>
         <Text textAlign="center">
           Ruby & React fan, fascinated by building software and drinking coffee
