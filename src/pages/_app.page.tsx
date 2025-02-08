@@ -1,7 +1,6 @@
 import { theme } from '@/config'
 import type { AppProps } from 'next/app'
 import { ChakraProvider } from '@chakra-ui/react'
-import { appWithTranslation } from 'next-i18next'
 import { AdminLayout, DefaultLayout, ErrorLayout } from '@/layout'
 
 function App({ Component, pageProps }: AppProps) {
@@ -22,4 +21,4 @@ function App({ Component, pageProps }: AppProps) {
   )
 }
 
-export default appWithTranslation(App)
+export default App

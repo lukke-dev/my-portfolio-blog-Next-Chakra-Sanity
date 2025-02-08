@@ -10,7 +10,7 @@ import {
   useColorModeValue,
 } from '@chakra-ui/react'
 import { FaGithubAlt } from 'react-icons/fa'
-import { useTranslation } from 'next-i18next'
+import { appWithTranslation, useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
 const About: React.FC = () => {
@@ -76,7 +76,8 @@ const About: React.FC = () => {
 export const getStaticProps = async ({ locale }: { locale: string }) => ({
   props: {
     ...(await serverSideTranslations(locale, ['common'])),
+    revalidate: 60 * 60 * 10 * 7 * 10, // 10 weeks
   },
 })
 
-export default About
+export default appWithTranslation(About)
