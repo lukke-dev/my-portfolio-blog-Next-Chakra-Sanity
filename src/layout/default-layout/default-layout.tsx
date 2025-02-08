@@ -9,7 +9,7 @@ export const DefaultLayout: React.FC<DefaultLayoutProps> = ({ children }) => {
       h="100vh"
       w="100vw"
       templateRows="50px 1fr"
-      templateColumns="repeat(8, 2fr)"
+      templateColumns="repeat(10, 2fr)"
       bg={useColorModeValue('gray.100', 'gray.800')}
     >
       <GridItem
@@ -22,11 +22,11 @@ export const DefaultLayout: React.FC<DefaultLayoutProps> = ({ children }) => {
         <SideMenu />
       </GridItem>
 
-      <GridItem colSpan={6} borderColor="blackAlpha.200">
+      <GridItem colSpan={8} borderColor="blackAlpha.200">
         <Header />
       </GridItem>
 
-      <GridItem colSpan={6} overflowX="hidden">
+      <GridItem colSpan={8} overflowX="hidden">
         <VStack h="full" align="start" px="8">
           {children}
         </VStack>
