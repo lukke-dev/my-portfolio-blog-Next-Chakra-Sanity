@@ -73,7 +73,7 @@ const About: React.FC = () => {
   )
 }
 
-export const getServerSideProps = async ({ locale }: { locale: string }) => ({
+export const getStaticProps = async ({ locale }: { locale: string }) => ({
   props: {
     ...(await serverSideTranslations(locale, ['common'])),
   },

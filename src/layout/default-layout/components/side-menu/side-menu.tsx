@@ -1,5 +1,4 @@
 import React from 'react'
-import { i18n } from 'next-i18next'
 import { IconLink } from '@/components'
 import { Link } from '@chakra-ui/next-js'
 import { usePathname } from 'next/navigation'
