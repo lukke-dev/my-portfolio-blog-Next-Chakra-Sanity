@@ -16,6 +16,7 @@ export const theme = extendTheme({
     heading: `'Montserrat', sans-serif`,
     body: `'Montserrat', sans-serif`,
   },
+  initialColorMode: 'dark',
   colors: {
     primary: {
       50: '#e3fafc',
