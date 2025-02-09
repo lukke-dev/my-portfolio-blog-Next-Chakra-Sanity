@@ -5,7 +5,8 @@ const getAllPostsQueries = `
   *[_type == "post"] {
     "id": _id,
     name_en,
-    name_pt
+    name_pt,
+    "slug": slug.current
   }
 `
 
