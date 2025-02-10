@@ -86,5 +86,9 @@ export const PostSchema: SchemaTypeDefinition = {
       type: 'reference',
       to: [{ type: 'category' }],
     },
+    {
+      name: 'minutes_to_read',
+      type: 'number',
+    },
   ],
 }
