@@ -9,13 +9,16 @@ import {
 } from '@chakra-ui/react'
 import { useHover } from 'usehooks-ts'
 import { PostCardProps } from './types'
+import { useRouter } from 'next/navigation'
 
 export const PostCard: React.FC<PostCardProps> = ({
+  slug,
   imageUrl,
   postTitle,
   postFooter,
   postDescription,
 }) => {
+  const router = useRouter()
   const hoverRef = useRef(null)
   const isHover = useHover(hoverRef)
 
@@ -26,6 +29,7 @@ export const PostCard: React.FC<PostCardProps> = ({
       cursor="pointer"
       borderRadius="4"
       borderWidth="1px"
+      onClick={() => router.push(`/posts/${slug}`)}
       borderColor={useColorModeValue('blackAlpha.300', 'whiteAlpha.400')}
     >
       <Box w="full" overflow="hidden">
@@ -36,7 +40,7 @@ export const PostCard: React.FC<PostCardProps> = ({
           src={imageUrl}
           borderRadius="4"
           objectFit="cover"
-          transition="all 0.2s ease 0s"
+          transition="all 0.4s ease 0.1s"
           {...(isHover && {
             transform: 'scale(1.1)',
           })}

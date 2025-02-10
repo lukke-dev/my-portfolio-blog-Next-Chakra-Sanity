@@ -1,7 +1,10 @@
 type Post = {
-  name_en: string
-  name_pt: string
-  content_en: TypedObject | TypedObject[]
-  content_pt: TypedObject | TypedObject[]
+  id: number
   slug: string
+  nameEN: string
+  namePT: string
+  createdAt: string
+  minutesToRead: number
+  contentEN: TypedObject | TypedObject[]
+  contentPT: TypedObject | TypedObject[]
 }

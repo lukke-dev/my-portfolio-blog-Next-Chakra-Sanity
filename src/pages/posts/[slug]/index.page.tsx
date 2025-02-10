@@ -45,7 +45,7 @@ const Post: React.FC = () => {
 
   useEffect(() => {
     const getPost = async () => {
-      const post = await getPostBySlug(String(router.query.slug))
+      const post: Post = await getPostBySlug(String(router.query.slug))
       if (post) {
         setPost(post)
         console.log('post ', post)
@@ -61,7 +61,7 @@ const Post: React.FC = () => {
 
   return (
     <div>
-      <PortableText value={post.content_pt} components={portableComponents} />
+      <PortableText value={post.contentPT} components={portableComponents} />
     </div>
   )
 }

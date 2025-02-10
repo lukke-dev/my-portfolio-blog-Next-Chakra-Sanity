@@ -4,9 +4,11 @@ import { getAllPosts } from '@src/queries'
 import { GetStaticProps } from '@node_modules/next'
 import { Box, Heading, useColorModeValue, Grid } from '@chakra-ui/react'
 
-const Posts: React.FC = (posts) => {
-  console.log('posts: ', posts)
+type PostsProps = {
+  posts: Post[]
+}
 
+const Posts: React.FC<PostsProps> = ({ posts }) => {
   return (
     <>
       <Box
@@ -23,60 +25,18 @@ const Posts: React.FC = (posts) => {
         </Heading>
       </Box>
       <Grid templateColumns="repeat(3, 1fr)" gap={6}>
-        <PostCard
-          imageUrl="https://www.insightssuccess.in/wp-content/uploads/2016/12/IMAGE-insights.jpg"
-          postTitle="Boost your conversion rate lorem ipsum"
-          postDescription="Lorem ipsum dolor sit amet, consetetur sadipscing elitr ..."
-          postFooter="Feb 08, 2021 · 6min read"
-        />
-        <PostCard
-          imageUrl="https://www.insightssuccess.in/wp-content/uploads/2016/12/IMAGE-insights.jpg"
-          postTitle="Boost your conversion rate lorem ipsum"
-          postDescription="Lorem ipsum dolor sit amet, consetetur sadipscing elitr ..."
-          postFooter="Feb 08, 2021 · 6min read"
-        />
-        <PostCard
-          imageUrl="https://www.insightssuccess.in/wp-content/uploads/2016/12/IMAGE-insights.jpg"
-          postTitle="Boost your conversion rate lorem ipsum"
-          postDescription="Lorem ipsum dolor sit amet, consetetur sadipscing elitr ..."
-          postFooter="Feb 08, 2021 · 6min read"
-        />
-        <PostCard
-          imageUrl="https://www.insightssuccess.in/wp-content/uploads/2016/12/IMAGE-insights.jpg"
-          postTitle="Boost your conversion rate lorem ipsum"
-          postDescription="Lorem ipsum dolor sit amet, consetetur sadipscing elitr ..."
-          postFooter="Feb 08, 2021 · 6min read"
-        />
-        <PostCard
-          imageUrl="https://www.insightssuccess.in/wp-content/uploads/2016/12/IMAGE-insights.jpg"
-          postTitle="Boost your conversion rate lorem ipsum"
-          postDescription="Lorem ipsum dolor sit amet, consetetur sadipscing elitr ..."
-          postFooter="Feb 08, 2021 · 6min read"
-        />
-        <PostCard
-          imageUrl="https://www.insightssuccess.in/wp-content/uploads/2016/12/IMAGE-insights.jpg"
-          postTitle="Boost your conversion rate lorem ipsum"
-          postDescription="Lorem ipsum dolor sit amet, consetetur sadipscing elitr ..."
-          postFooter="Feb 08, 2021 · 6min read"
-        />
-        <PostCard
-          imageUrl="https://www.insightssuccess.in/wp-content/uploads/2016/12/IMAGE-insights.jpg"
-          postTitle="Boost your conversion rate lorem ipsum"
-          postDescription="Lorem ipsum dolor sit amet, consetetur sadipscing elitr ..."
-          postFooter="Feb 08, 2021 · 6min read"
-        />
-        <PostCard
-          imageUrl="https://www.insightssuccess.in/wp-content/uploads/2016/12/IMAGE-insights.jpg"
-          postTitle="Boost your conversion rate lorem ipsum"
-          postDescription="Lorem ipsum dolor sit amet, consetetur sadipscing elitr ..."
-          postFooter="Feb 08, 2021 · 6min read"
-        />
-        <PostCard
-          imageUrl="https://www.insightssuccess.in/wp-content/uploads/2016/12/IMAGE-insights.jpg"
-          postTitle="Boost your conversion rate lorem ipsum"
-          postDescription="Lorem ipsum dolor sit amet, consetetur sadipscing elitr ..."
-          postFooter="Feb 08, 2021 · 6min read"
-        />
+        {posts.map(({ id, nameEN, slug, minutesToRead }) => {
+          return (
+            <PostCard
+              key={id}
+              slug={slug}
+              postTitle={nameEN}
+              postFooter={`Feb 08, 2021 · ${minutesToRead}min read`}
+              postDescription="Lorem ipsum dolor sit amet, consetetur sadipscing elitr ..."
+              imageUrl="https://www.insightssuccess.in/wp-content/uploads/2016/12/IMAGE-insights.jpg"
+            />
+          )
+        })}
       </Grid>
     </>
   )

@@ -4,9 +4,12 @@ import { sanityClient } from '../utils'
 const getAllPostsQueries = `
   *[_type == "post"] {
     "id": _id,
-    name_en,
-    name_pt,
-    "slug": slug.current
+    "nameEN": name_en,
+    "namePT": name_pt,
+    "slug": slug.current,
+    "contentEN": content_en,
+    "contentPT": content_pt,
+    "minutesToRead": minutes_to_read
   }
 `
 

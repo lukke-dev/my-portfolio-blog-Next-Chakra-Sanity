@@ -5,11 +5,13 @@ const getPostBySlugQuery = `
   *[_type == "post" && slug.current == $slug][0] {
     ...,
     "id": _id,
-    "name_en": name_en,
-    "name_pt": name_pt,
-    "content_en": content_en,
-    "content_pt": content_pt,
-    "slug": slug.current
+    "nameEN": name_en,
+    "namePT": name_pt,
+    "slug": slug.current,
+    "contentEN": content_en,
+    "contentPT": content_pt,
+    "createdAt": _createdAt,
+    "minutesToRead": minutes_to_read
   }
 `
 
